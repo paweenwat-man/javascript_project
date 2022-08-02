@@ -2,11 +2,40 @@
 <html>
   <head>
     <title>Hello World</title>
+    <script>
+      function greeting() {
+        let name = prompt('Please input your name.')
+        window.alert(`Hello ${name}`);
+        document.getElementById('demo').innerHTML = `Hello ${name}`;
+      }
+      function changeToRed() {
+        document.getElementById('demo').style.color = 'red';
+        document.getElementById('demo').style.fontSize = '30px';
+      }
+      function changeToCat() {
+        document.getElementById('pic').src = 'cat.jpg';
+      }
+      function changeToDog() {
+        document.getElementById('pic').src = 'dog.jpg';
+      }
+    </script>
   </head>
   <body>
-    <img src="https://mymodernmet.com/wp/wp-content/uploads/2020/09/funny-shiba-inu-ruins-group-photos-thumbnail.jpg" alt="Shiba Inu #1">
-    <img src="https://www.coinkolik.com/wp-content/uploads/2022/06/shib.jpg" alt="Shiba Inu #2">
     <h1>This is a heading.</h1>
     <p>This is a paragraph.</p>
+    <img id="pic" width="100%" src="cat.jpg"><br>
+    <button type="button" onclick="greeting()">
+    Click me to do a greeting.</button>
+    <button type="button" onclick="changeToRed()">
+    Click me to change the color of text.</button>
+    <button type="button" onclick="changeToCat()">
+    Click me to change the image to cat.</button>
+    <button type="button" onclick="changeToDog()">
+    Click me to change the image to dog.</button>
+    <p id="demo"></p>
+    <!--
+    <img id="pic" width="45%" src="https://mymodernmet.com/wp/wp-content/uploads/2020/09/funny-shiba-inu-ruins-group-photos-thumbnail.jpg" alt="Shiba Inu #1">
+    <img width="45%" src="https://www.coinkolik.com/wp-content/uploads/2022/06/shib.jpg" alt="Shiba Inu #2">
+    -->
   </body>
 </html>
